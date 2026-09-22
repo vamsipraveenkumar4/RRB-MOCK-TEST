@@ -13,7 +13,8 @@ import {
   Moon, 
   Sun,
   Flame,
-  CheckCircle2
+  CheckCircle2,
+  Sparkles
 } from 'lucide-react';
 
 export const Navbar = () => {
@@ -23,6 +24,7 @@ export const Navbar = () => {
     darkMode, 
     toggleDarkMode, 
     setIsSearchOpen,
+    setIsAiModalOpen,
     mistakes,
     bookmarks
   } = useApp();
@@ -107,8 +109,17 @@ export const Navbar = () => {
             })}
           </nav>
 
-          {/* Actions: Search, Dark Mode, Quick Start */}
+          {/* Actions: ChatGPT AI Refresh, Search, Dark Mode */}
           <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setIsAiModalOpen(true)}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md shadow-orange-500/20 transition-all transform hover:scale-105"
+              title="Connect ChatGPT API & Refresh Questions"
+            >
+              <Sparkles className="w-3.5 h-3.5 fill-amber-200 text-amber-100 animate-pulse" />
+              <span>ChatGPT AI</span>
+            </button>
+
             <button
               onClick={() => setIsSearchOpen(true)}
               className="p-2 rounded-lg text-slate-500 hover:text-orange-600 dark:text-slate-400 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-slate-800 transition-colors"

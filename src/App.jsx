@@ -2,6 +2,7 @@ import React from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Navbar } from './components/Navbar';
 import { SearchModal } from './components/SearchModal';
+import { AiRefreshModal } from './components/AiRefreshModal';
 import { Dashboard } from './pages/Dashboard';
 import { PaperLibrary } from './pages/PaperLibrary';
 import { TestEngine } from './pages/TestEngine';
@@ -39,6 +40,7 @@ export default function App() {
         <Navbar />
         <MainContent />
         <SearchModal />
+        <AiRefreshModal />
         
         {/* Footer */}
         <footer className="border-t border-slate-200 dark:border-slate-800 py-8 bg-white dark:bg-slate-900 text-slate-500 text-xs text-center space-y-2">

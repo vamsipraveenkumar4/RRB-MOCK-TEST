@@ -32,6 +32,7 @@ export const Dashboard = () => {
     weakTopics,
     startTest,
     setActivePage,
+    setIsAiModalOpen,
     mistakes,
     bookmarks
   } = useApp();
@@ -108,6 +109,14 @@ export const Dashboard = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-4">
+            <button
+              onClick={() => setIsAiModalOpen(true)}
+              className="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm shadow-xl transition-all flex items-center space-x-2 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <Sparkles className="w-4 h-4 fill-slate-950 text-slate-950 animate-bounce" />
+              <span>ChatGPT Question Refresh</span>
+            </button>
+
             <button
               onClick={() => startTest('alp-2025-s2', 'practice')}
               className="px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-sm shadow-xl transition-all flex items-center space-x-2 hover:scale-[1.02] active:scale-[0.98]"

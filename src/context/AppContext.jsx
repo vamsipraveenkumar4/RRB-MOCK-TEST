@@ -64,6 +64,7 @@ export const AppProvider = ({ children }) => {
   const [activePage, setActivePage] = useState('dashboard');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isAiModalOpen, setIsAiModalOpen] = useState(false);
 
   // Active Test Engine state
   const [activeTest, setActiveTest] = useState(null); 
@@ -404,6 +405,9 @@ export const AppProvider = ({ children }) => {
       setSearchQuery,
       isSearchOpen,
       setIsSearchOpen,
+      isAiModalOpen,
+      setIsAiModalOpen,
+      setPapers,
       activeTest,
       startTest,
       selectAnswer,
