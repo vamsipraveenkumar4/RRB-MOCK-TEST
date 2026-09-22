@@ -43,22 +43,36 @@ export const Dashboard = () => {
     {
       id: 'alp',
       name: 'RRB ALP',
-      fullTitle: 'Assistant Loco Pilot CBT-1',
-      color: 'from-blue-600 to-indigo-700',
+      fullTitle: 'Assistant Loco Pilot CBT-1 & 2',
       badge: 'High Priority',
-      badgeColor: 'bg-blue-500 text-white',
-      desc: 'Physics, Math, Reasoning & Technical Fundamentals',
+      badgeColor: 'bg-blue-600 text-white',
+      accentColor: 'border-l-4 border-l-blue-600',
+      buttonColor: 'bg-blue-50 dark:bg-blue-950/60 text-blue-600 hover:bg-blue-600 hover:text-white',
+      desc: 'Physics, Basic Science, Mathematics & Reasoning',
       questionCount: 75,
       duration: '60 Min'
+    },
+    {
+      id: 'ntpc',
+      name: 'RRB NTPC',
+      fullTitle: 'Graduate & Under-Graduate CBT',
+      badge: 'Popular',
+      badgeColor: 'bg-amber-600 text-white',
+      accentColor: 'border-l-4 border-l-amber-600',
+      buttonColor: 'bg-amber-50 dark:bg-amber-950/60 text-amber-600 hover:bg-amber-600 hover:text-white',
+      desc: 'General Awareness, Indian Railways & Quantitative Aptitude',
+      questionCount: 100,
+      duration: '90 Min'
     },
     {
       id: 'je',
       name: 'RRB JE',
       fullTitle: 'Junior Engineer CBT-1 & 2',
-      color: 'from-teal-600 to-emerald-700',
       badge: 'Technical',
-      badgeColor: 'bg-teal-500 text-white',
-      desc: 'Logical Reasoning, Aptitude & Engineering Science',
+      badgeColor: 'bg-emerald-600 text-white',
+      accentColor: 'border-l-4 border-l-emerald-600',
+      buttonColor: 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 hover:bg-emerald-600 hover:text-white',
+      desc: 'Logical Reasoning, Technical Aptitude & Engineering Science',
       questionCount: 100,
       duration: '90 Min'
     },
@@ -66,21 +80,23 @@ export const Dashboard = () => {
       id: 'technician',
       name: 'RRB Technician',
       fullTitle: 'Grade I & III Signal/Tele',
-      color: 'from-purple-600 to-indigo-800',
       badge: 'Grade III',
-      badgeColor: 'bg-purple-500 text-white',
-      desc: 'Basic Science, Physics Numericals & Arithmetic',
+      badgeColor: 'bg-purple-600 text-white',
+      accentColor: 'border-l-4 border-l-purple-600',
+      buttonColor: 'bg-purple-50 dark:bg-purple-950/60 text-purple-600 hover:bg-purple-600 hover:text-white',
+      desc: 'Basic Science, Physics Numericals & Technical Trade',
       questionCount: 100,
       duration: '90 Min'
     },
     {
-      id: 'ntpc',
-      name: 'RRB NTPC',
-      fullTitle: 'Graduate & Under-Graduate CBT',
-      color: 'from-amber-600 to-orange-700',
-      badge: 'Popular',
-      badgeColor: 'bg-amber-500 text-white',
-      desc: 'General Awareness, Indian Railways & Mathematics',
+      id: 'groupd',
+      name: 'RRB Group D',
+      fullTitle: 'Level 1 Track Maintainer & Assistants',
+      badge: 'Level 1',
+      badgeColor: 'bg-rose-600 text-white',
+      accentColor: 'border-l-4 border-l-rose-600',
+      buttonColor: 'bg-rose-50 dark:bg-rose-950/60 text-rose-600 hover:bg-rose-600 hover:text-white',
+      desc: 'General Science (10th Standard Physics/Chem), Math & GK',
       questionCount: 100,
       duration: '90 Min'
     }
@@ -111,10 +127,10 @@ export const Dashboard = () => {
           <div className="flex flex-wrap items-center gap-3 pt-4">
             <button
               onClick={() => setIsAiModalOpen(true)}
-              className="px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm shadow-xl transition-all flex items-center space-x-2 hover:scale-[1.02] active:scale-[0.98]"
+              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-extrabold text-sm shadow-xl transition-all flex items-center space-x-2 hover:scale-[1.02] active:scale-[0.98]"
             >
               <Sparkles className="w-4 h-4 fill-slate-950 text-slate-950 animate-bounce" />
-              <span>ChatGPT Question Refresh</span>
+              <span>AI Question Refresh</span>
             </button>
 
             <button
@@ -291,38 +307,38 @@ export const Dashboard = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {examCards.map((exam) => (
             <div 
               key={exam.id}
-              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md p-6 hover:border-orange-500 dark:hover:border-orange-500 transition-all group flex flex-col justify-between"
+              className={`bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-xl p-5 ${exam.accentColor} transition-all group flex flex-col justify-between`}
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${exam.badgeColor}`}>
+                  <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${exam.badgeColor}`}>
                     {exam.badge}
                   </span>
-                  <span className="text-xs text-slate-400 font-mono">{exam.duration}</span>
+                  <span className="text-xs text-slate-400 font-mono font-medium">{exam.duration}</span>
                 </div>
 
-                <h3 className="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-orange-600 transition-colors">
+                <h3 className="text-xl font-black text-slate-900 dark:text-white group-hover:text-orange-600 transition-colors">
                   {exam.name}
                 </h3>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-2">
+                <p className="text-xs font-bold text-slate-600 dark:text-slate-300 mb-2">
                   {exam.fullTitle}
                 </p>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
                   {exam.desc}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
-                  {exam.questionCount} Questions
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-400">
+                  {exam.questionCount} Qs
                 </span>
                 <button
                   onClick={() => startTest(`exam-${exam.id}`, 'practice')}
-                  className="px-4 py-2 rounded-xl bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 font-bold text-xs transition-colors flex items-center space-x-1"
+                  className={`px-3.5 py-1.5 rounded-xl font-bold text-xs transition-all flex items-center space-x-1 ${exam.buttonColor}`}
                 >
                   <span>Practice</span>
                   <ArrowRight className="w-3.5 h-3.5" />

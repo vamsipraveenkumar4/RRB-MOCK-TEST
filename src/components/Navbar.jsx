@@ -109,15 +109,15 @@ export const Navbar = () => {
             })}
           </nav>
 
-          {/* Actions: ChatGPT AI Refresh, Search, Dark Mode */}
+          {/* Actions: Gemini AI Refresh, Search, Dark Mode */}
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setIsAiModalOpen(true)}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 shadow-md shadow-orange-500/20 transition-all transform hover:scale-105"
-              title="Connect ChatGPT API & Refresh Questions"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-md shadow-blue-500/20 transition-all transform hover:scale-105"
+              title="Connect Gemini AI & Refresh RRB Questions"
             >
-              <Sparkles className="w-3.5 h-3.5 fill-amber-200 text-amber-100 animate-pulse" />
-              <span>ChatGPT AI</span>
+              <Sparkles className="w-3.5 h-3.5 fill-blue-200 text-blue-100 animate-pulse" />
+              <span>Gemini AI</span>
             </button>
 
             <button
