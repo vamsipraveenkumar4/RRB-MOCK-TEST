@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-slate-50 text-slate-900 transition-colors duration-200 antialiased selection:bg-orange-500 selection:text-white;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+.font-telugu {
+  font-family: 'Noto Sans Telugu', 'Segoe UI', 'Gautami', 'Telugu Sangam MN', sans-serif;
+}
+
+/* Custom Utilities & Railway Aesthetic Elements */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(254, 215, 170, 0.6);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.railway-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1c1917 50%, #c2410c 100%);
+}
+
+.railway-gradient-accent {
+  background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}

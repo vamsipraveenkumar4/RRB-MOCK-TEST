@@ -1,0 +1,93 @@
+export const DEFAULT_PAPERS = [
+  {
+    id: "alp-2018-30aug-s2",
+    title: "RRB ALP & Technicians 2018 Official Paper (30/08/2018 Shift 2)",
+    exam: "ALP",
+    year: 2018,
+    shift: "Shift 2",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 25,
+    durationMinutes: 25,
+    subjects: ["General Science", "Mathematics", "Reasoning", "General Awareness"],
+    description: "Official RRB ALP 2018 Shift 2 paper with Physics numerics, Chemistry reactions, Geometry & General Knowledge.",
+    isVerified: true
+  },
+  {
+    id: "alp-2018-31aug-s3",
+    title: "RRB ALP & Technicians 2018 Official Paper (31/08/2018 Shift 3)",
+    exam: "ALP",
+    year: 2018,
+    shift: "Shift 3",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 25,
+    durationMinutes: 25,
+    subjects: ["Mathematics", "General Science", "Reasoning", "General Awareness"],
+    description: "Official RRB ALP 2018 Question Paper extracted directly from official PDF with verified keys and Telugu solutions.",
+    isVerified: true
+  },
+  {
+    id: "alp-2018-30aug-s3",
+    title: "RRB ALP & Technicians 2018 Official Paper (30/08/2018 Shift 3)",
+    exam: "ALP",
+    year: 2018,
+    shift: "Shift 3",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 25,
+    durationMinutes: 25,
+    subjects: ["General Science", "Mathematics", "Reasoning", "General Awareness"],
+    description: "Official RRB ALP 2018 evening shift paper featuring sound wave frequency, optics numerics & current affairs.",
+    isVerified: true
+  },
+  {
+    id: "alp-2018-31aug-s1",
+    title: "RRB ALP & Technicians 2018 Official Paper (31/08/2018 Shift 1)",
+    exam: "ALP",
+    year: 2018,
+    shift: "Shift 1",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 25,
+    durationMinutes: 25,
+    subjects: ["Mathematics", "General Science", "Reasoning", "General Awareness"],
+    description: "Official RRB ALP 2018 morning shift question paper with authentic keys and complete Telugu explanations.",
+    isVerified: true
+  },
+  {
+    id: "alp-2025-s2",
+    title: "RRB ALP CBT 1 Model Practice Paper 2025",
+    exam: "ALP",
+    year: 2025,
+    shift: "Shift 2",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 10,
+    durationMinutes: 10,
+    subjects: ["Mathematics", "Reasoning", "General Science"],
+    description: "Model CBT-1 Practice Paper featuring quantitative aptitude & logical reasoning.",
+    isVerified: true
+  },
+  {
+    id: "je-2025-s1",
+    title: "RRB JE CBT 1 Technical & Non-Tech Paper",
+    exam: "JE",
+    year: 2025,
+    shift: "Shift 1",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 10,
+    durationMinutes: 10,
+    subjects: ["Mathematics", "Reasoning", "General Science"],
+    description: "RRB Junior Engineer CBT-1 Stage Question Paper featuring quantitative aptitude.",
+    isVerified: true
+  },
+  {
+    id: "ntpc-2024-s2",
+    title: "RRB NTPC Graduate Level CBT 1",
+    exam: "NTPC",
+    year: 2024,
+    shift: "Shift 2",
+    language: "Bilingual (English + Telugu)",
+    totalQuestions: 10,
+    durationMinutes: 10,
+    subjects: ["General Awareness", "Mathematics", "Reasoning"],
+    description: "RRB Non-Technical Popular Categories CBT-1 exam paper with General Knowledge & Railway awareness.",
+    isVerified: true
+  }
+];
