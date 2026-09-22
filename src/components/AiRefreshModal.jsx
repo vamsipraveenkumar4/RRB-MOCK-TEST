@@ -71,7 +71,7 @@ export const AiRefreshModal = () => {
   // Update default model when provider changes
   useEffect(() => {
     if (provider === 'gemini') {
-      setModel('gemini-2.5-flash');
+      setModel('gemini-3.6-flash');
     } else {
       setModel('gpt-4o-mini');
     }
@@ -357,9 +357,9 @@ export const AiRefreshModal = () => {
                 >
                   {provider === 'gemini' ? (
                     <>
-                      <option value="gemini-2.5-flash">gemini-2.5-flash (Latest & Fast - Recommended)</option>
-                      <option value="gemini-1.5-flash">gemini-1.5-flash (Fast Free Tier)</option>
-                      <option value="gemini-1.5-pro">gemini-1.5-pro (Deep Knowledge)</option>
+                      <option value="gemini-flash-latest">gemini-flash-latest (Fast & Recommended)</option>
+                      <option value="gemini-2.5-flash">gemini-2.5-flash (High Speed)</option>
+                      <option value="gemini-2.5-pro">gemini-2.5-pro (Deep Reasoning)</option>
                     </>
                   ) : (
                     <>

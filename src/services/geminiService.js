@@ -24,7 +24,7 @@ export const testGeminiKey = async (apiKey) => {
     throw new Error('Please enter a Google Gemini API Key.');
   }
 
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${keyToTest.trim()}`;
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${keyToTest.trim()}`;
   
   const response = await fetch(endpoint, {
     method: 'POST',
@@ -35,8 +35,7 @@ export const testGeminiKey = async (apiKey) => {
   });
 
   if (!response.ok) {
-    // Try fallback to gemini-1.5-flash if 2.5-flash is not available in region
-    const fallbackEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${keyToTest.trim()}`;
+    const fallbackEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${keyToTest.trim()}`;
     const fallbackRes = await fetch(fallbackEndpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -95,7 +94,7 @@ Each question object MUST follow this schema:
   }
 ]`;
 
-  let selectedModel = model || 'gemini-2.5-flash';
+  let selectedModel = model || 'gemini-3.6-flash';
   let endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${keyToUse.trim()}`;
 
   let response = await fetch(endpoint, {
@@ -110,9 +109,9 @@ Each question object MUST follow this schema:
     })
   });
 
-  // Fallback to gemini-1.5-flash if model name is invalid or unavailable
+  // Fallback to gemini-flash-latest if model name is invalid or unavailable
   if (!response.ok) {
-    selectedModel = 'gemini-1.5-flash';
+    selectedModel = 'gemini-flash-latest';
     endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${selectedModel}:generateContent?key=${keyToUse.trim()}`;
     response = await fetch(endpoint, {
       method: 'POST',
